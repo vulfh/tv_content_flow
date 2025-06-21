@@ -1,0 +1,46 @@
+{
+  "name": "contentservice",
+  "version": "1.0.0",
+  "description": "Content service which will aggregate information from external video content",
+  "main": "index.js",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "keywords": [
+    "content",
+    "video"
+  ],
+  "author": "vulf lahman",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/apollo": "^13.1.0",
+    "@nestjs/common": "^11.1.3",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.3",
+    "@nestjs/graphql": "^13.1.0",
+    "@nestjs/platform-express": "^11.1.3",
+    "@nestjs/typeorm": "^11.0.0",
+    "apollo-server-express": "^3.13.0",
+    "graphql": "^16.11.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.24"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  }
+}
