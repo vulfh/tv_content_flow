@@ -4,6 +4,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MoviesModule } from './movies/movies.module';
+import { ElasticsearchConfigModule } from './config/elasticsearch.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { MoviesModule } from './movies/movies.module';
       playground: true,
     }),
     MoviesModule,
+    ElasticsearchConfigModule,
   ],
   controllers: [AppController],
   providers: [AppService],
