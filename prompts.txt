@@ -1,0 +1,14 @@
+start kibana:
+docker run --name kib01 --net elastic -p 5601:5601 docker.elastic.co/kibana/kibana:9.0.0
+enrollment token:
+docker exec -it es01 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+
+
+docker pull docker.elastic.co/elasticsearch/elasticsearch:9.0.0
+docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB docker.elastic.co/elasticsearch/elasticsearch:9.0.0
+
+Run elasticsearch not secure:
+docker run -d --name es9-01 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "xpack.security.enabled=false" docker.elastic.co/elasticsearch/elasticsearch:9.0.0
+
+Elasticsearch url:
+http://172.18.0.3:9200
