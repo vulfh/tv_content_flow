@@ -44,7 +44,7 @@ export class MoviesElasticsearchRepository implements MoviesRepository {
       keywords: hit._source.keywords,
       description: hit._source.description,
       rating: hit._source.rating,
-      releaseYear: hit._source.releaseYear,
+      releaseDate: hit._source.releaseDate,
       platforms: hit._source.platforms,
     }));
 
