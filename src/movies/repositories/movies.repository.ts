@@ -14,6 +14,7 @@ export class MoviesRepositoryImpl implements MoviesRepository {
       country: 'USA',
       type: 'Movie',
       keywords: ['action', 'matrix', 'neo', 'cyberpunk'],
+      releaseDate: new Date('1999-03-31'),
     },
     {
       id: '2',
@@ -22,6 +23,7 @@ export class MoviesRepositoryImpl implements MoviesRepository {
       country: 'USA',
       type: 'Movie',
       keywords: ['dream', 'inception', 'nolan', 'action'],
+      releaseDate: new Date('2010-07-16'),
     },
     {
       id: '3',
@@ -30,6 +32,7 @@ export class MoviesRepositoryImpl implements MoviesRepository {
       country: 'USA',
       type: 'Movie',
       keywords: ['crime', 'godfather', 'mafia', 'drama'],
+      releaseDate: new Date('1972-03-24'),
     },
     {
       id: '4',
@@ -38,6 +41,7 @@ export class MoviesRepositoryImpl implements MoviesRepository {
       country: 'USA',
       type: 'Movie',
       keywords: ['crime', 'tarantino', 'fiction', 'drama'],
+      releaseDate: new Date('1994-10-14'),
     },
     {
       id: '5',
@@ -46,6 +50,7 @@ export class MoviesRepositoryImpl implements MoviesRepository {
       country: 'USA',
       type: 'Movie',
       keywords: ['batman', 'dark', 'nolan', 'action'],
+      releaseDate: new Date('2008-07-18'),
     },
   ];
 

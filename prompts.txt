@@ -12,3 +12,15 @@ docker run -d --name es9-01 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-
 
 Elasticsearch url:
 http://172.18.0.3:9200
+
+
+migration
+initial migration:
+npx typeorm-ts-node-commonjs migration:generate -d ormconfig.ts src/database/migrations/InitialMigration
+
+ migration:
+ npx typeorm-ts-node-commonjs migration:run -d ormconfig.ts
+
+
+Run migration
+npm run migration:run

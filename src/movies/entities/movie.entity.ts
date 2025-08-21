@@ -8,8 +8,8 @@ export class Movie {
   @Field()
   title: string;
 
-  @Field()
-  type: string; // movie or series
+  @Field({ nullable: true })
+  description?: string;
 
   @Field()
   genre: string;
@@ -17,17 +17,19 @@ export class Movie {
   @Field()
   country: string;
 
+  @Field()
+  type: string; // movie or series
+
   @Field(() => [String])
   keywords: string[];
 
-  @Field({ nullable: true })
-  description?: string;
+  @Field()
+  releaseDate: Date;
+
+
 
   @Field({ nullable: true })
   rating?: number;
-
-  @Field({ nullable: true })
-  releaseYear?: number;
 
   @Field(() => [String], { nullable: true })
   platforms?: string[]; // where it can be watched
