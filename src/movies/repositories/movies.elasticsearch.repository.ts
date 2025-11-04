@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { MoviesRepository } from './movies.repository.interface';
+import type { MoviesRepository } from './movies.repository.interface';
 import { Movie } from '../entities/movie.entity';
 import { SearchMovieInput } from '../dto/search-movie.input';
 import { PaginatedMovies } from '../dto/paginated-movies.dto';
